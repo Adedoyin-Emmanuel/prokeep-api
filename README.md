@@ -13,7 +13,7 @@ As usual, I'm going to list out the resources I used to build this API. I'm usin
 
 1. Become a ASP.NET Developer <https://roadmap.sh/aspnet-core>
 2. ASP.NET Core Web API and Entity Framework Core - Full Course Including CRUD <https://www.youtube.com/watch?v=6YIRKBsRWVI>
-3. Download (video with cipsave) ASP.NET Core Web API and Entity Framework Core - Full Course Including CRUD <https://clipsave.ng/app/youtube?url=https://www.youtube.com/watch?v=6YIRKBsRWVI>
+3. Download (video with clipsave) ASP.NET Core Web API and Entity Framework Core - Full Course Including CRUD <https://clipsave.ng/app/youtube?url=https://www.youtube.com/watch?v=6YIRKBsRWVI>
 4. Sameer Saini Udemy Full Course. You should check this out. It is massive. I'm also going to get it. <https://www.udemy.com/course/build-rest-apis-with-aspnet-core-web-api-entity-framework/?couponCode=JULY2024>
 
 **Download Video**
