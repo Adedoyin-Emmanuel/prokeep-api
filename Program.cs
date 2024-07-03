@@ -12,7 +12,7 @@ var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING"
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddDbContext<AppContext>(options => options.UseNpgsql(connectionString));
 
 var app = builder.Build();
 
