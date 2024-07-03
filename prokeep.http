@@ -1,0 +1,6 @@
+@prokeep_HostAddress = http://localhost:5078
+
+GET {{prokeep_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
