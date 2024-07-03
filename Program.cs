@@ -29,4 +29,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseExceptionHandler("/error/500");
+app.UseStatusCodePagesWithReExecute("/error/{0}");
+
 app.Run();

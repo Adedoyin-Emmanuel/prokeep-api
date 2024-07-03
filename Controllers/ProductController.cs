@@ -2,6 +2,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using prokeep.Controllers.Extensions;
 
 
 namespace prokeep.Controllers;
@@ -19,14 +20,14 @@ public class ProductController : ControllerBase
     {
         var response = new
         {
-            Title = "Created",
-            Message = "Item created successfully"
+            Title = "Chocolate Bread",
+            Description = "Sweet yummy chocolate bread"
         };
 
-        return new JsonResult(new { title = "created", message = "Item created successfully" })
-        {
-            StatusCode = 201,
-        };
+
+
+        return new CreatedAtActionResult("Create", "Product", response, new Respond("Product created successfully", response));
+
     }
 
 }
