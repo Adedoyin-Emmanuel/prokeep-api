@@ -16,7 +16,6 @@ public class Respond
 
 
     [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
-
     public string Message { get; private set; }
 
     public object? Result { get; private set; }

@@ -15,7 +15,6 @@ public class ProductController : ControllerBase
 
 
     [HttpPost]
-
     public async Task<IActionResult> Create()
     {
         var response = new
@@ -23,7 +22,6 @@ public class ProductController : ControllerBase
             Title = "Chocolate Bread",
             Description = "Sweet yummy chocolate bread"
         };
-
 
 
         return new CreatedAtActionResult("Create", "Product", response, new Respond("Product created successfully", response));
