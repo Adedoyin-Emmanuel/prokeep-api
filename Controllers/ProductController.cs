@@ -10,8 +10,12 @@ namespace prokeep.Controllers;
 
 [ApiController]
 [Route("api/[Controller]")]
-public class ProductController : ControllerBase
+public class ProductController(ILogger<ProductController> logger, AppContext dbContext) : ControllerBase
 {
+
+    private readonly ILogger<ProductController> _logger = logger;
+    private readonly AppContext _dbContext = dbContext;
+
 
 
     [HttpPost]
