@@ -23,8 +23,6 @@ public class ProductController(ILogger<ProductController> logger, AppContext dbC
     [HttpPost]
     public async Task<IActionResult> Create(CreateProductDto createProductDto)
     {
-
-
         var product = new Product
         {
             Title = createProductDto.Title,
@@ -47,6 +45,28 @@ public class ProductController(ILogger<ProductController> logger, AppContext dbC
         var products = await _dbContext.Product.ToListAsync();
 
         return Ok(new Respond("Products fetched successfully", products));
+    }
+
+
+
+    [HttpGet]
+    [Route("{id}")]
+    public async Task<IActionResult> GetById(Guid id)
+    {
+        var product = await _dbContext.Product.FindAsync(id);
+
+        if (product is null) return NotFound(new Respond("Product not found", 404));
+
+        return Ok(new Respond("Product fetched successfully", product));
+    }
+
+
+
+    [HttpPut]
+    [Route("{id}")]
+    public async Task<IActionResult> Update(Guid id)
+    {
+        return Ok();
     }
 
 }
