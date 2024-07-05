@@ -25,6 +25,7 @@ public class Respond
     {
         StatusCode = statusCode;
         StatusDescription = statusDescription;
+        Message = String.Empty;
     }
 
 

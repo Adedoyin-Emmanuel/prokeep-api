@@ -10,10 +10,5 @@ public class AppContext : DbContext
 
     }
 
-    // protected override void OnModelCreating(ModelBuilder modelBuilder)
-    // {
-    //     modelBuilder.Entity<Product>().Property(p => p.CreatedAt).HasDefaultValueSql("getdate()");
-    // }
-
     public DbSet<Product> Product { get; set; }
 }
