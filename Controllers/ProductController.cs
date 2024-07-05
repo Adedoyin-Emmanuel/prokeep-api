@@ -41,4 +41,12 @@ public class ProductController(ILogger<ProductController> logger, AppContext dbC
 
     }
 
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var products = await _dbContext.Product.ToListAsync();
+
+        return Ok(new Respond("Products fetched successfully", products));
+    }
+
 }
