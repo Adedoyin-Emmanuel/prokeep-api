@@ -55,7 +55,7 @@ public class ProductController(ILogger<ProductController> logger, AppContext dbC
     {
         var product = await _dbContext.Product.FindAsync(id);
 
-        if (product is null) return NotFound(new Respond("Product not found", 404));
+        if (product is null) return NotFound(new NotFoundError("Product not found"));
 
         return Ok(new Respond("Product fetched successfully", product));
     }
@@ -64,9 +64,40 @@ public class ProductController(ILogger<ProductController> logger, AppContext dbC
 
     [HttpPut]
     [Route("{id}")]
-    public async Task<IActionResult> Update(Guid id)
+    public async Task<IActionResult> Update(UpdateProductDto updateProductDto, Guid id)
     {
-        return Ok();
+
+        var product = await _dbContext.Product.FindAsync(id);
+
+        if (product is null) return NotFound(new NotFoundError("Product not found"));
+
+
+        product.Title = updateProductDto.Title!;
+        product.Description = updateProductDto.Description!;
+        product.Price = updateProductDto.Price!;
+        product.Manufacturer = updateProductDto.Manufacturer!;
+
+
+        await _dbContext.SaveChangesAsync();
+
+        return Ok(new Respond("Product updated successfully", product));
+    }
+
+
+    [HttpDelete]
+    [Route("{id}")]
+
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        var product = await _dbContext.Product.FindAsync(id);
+
+        if (product is null) return NotFound(new NotFoundError("Product not found"));
+
+        _dbContext.Product.Remove(product);
+
+        await _dbContext.SaveChangesAsync();
+
+        return Ok(new Respond("Product deleted successfully"));
     }
 
 }

@@ -6,7 +6,7 @@ namespace prokeep.Models.Dto;
 
 public record CreateProductDto(
 
-    [Required, MinLength(1)] string Title,
+    [Required, MaxLength(20)] string Title,
 
     [Required][MaxLength(2500)] string Description,
 
