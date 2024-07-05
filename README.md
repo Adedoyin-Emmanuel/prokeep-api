@@ -1,11 +1,34 @@
 # Prokeep API 🚀
 
-This is a simple API built ASP.NET. I built this API to learn how building API's works in ASP.NET. This API is built with DOTNET 8, Entity Framework Core 8 and Postgres Database.
+This is a simple API built ASP.NET. I built this API to learn how building API's works in ASP.NET. This API is built with DOTNET 8, Entity Framework Core 8 and Postgres Database. Top that, this is my first API with **ASP.NET** and I love it.
 
 ## Why I built this API 🤔
 
 I built this API to learn how building API's works in ASP.NET. This is part of my **C#Journey**. You can find that here.
-<https://github.com/adedoyin-emmanuel/csharp-journey>.
+<https://github.com/adedoyin-emmanuel/csharp-journey>. I've also learned a lot from building this project. I've learned how to document endpoints in **ASP.NET** `Swashbuckle`, adding Entity `CreatedAt` and `UpdatedAt` **Timestamp** using **EFCore**. I also learned a bit about **Automapper** and **MediaTR** even though I didn't use them in this project, I learned about the `record` type in **C#** and why it is recommended for **DTOS**, I also learned how to build **APIS** with consistent response payloads which I'm a fan of. You check out how I write my APIS in **NodeJS and Typescript** <https://github.com/adedoyin-emmanuel/nodejs-template>. I'm really happy because I've learned a lot, this time yesterday, I was battling bugs and all.. Concerning sending a consistent response to the client in **ASP.NET** check out this article <https://matteocontrini.medium.com/consistent-error-responses-in-asp-net-core-web-apis-bb70b435d1f8> which helped me to implement my own solution. You can also check how I implemented mine.
+
+## API Demo 🔧
+
+No be all these cho cho cho, show workings. Here are my workings my lord.
+
+![Img 1](./assets/img-1.png)
+
+The Swagger documentation with `Swashbuckle`, made my life easier writing **API Documentation**
+
+![Img 2](./assets/img-2.png)
+
+Testing the `Create-Product` endpoint with postman, BTW you should try that `Rocky-Bites`. It is an amazing chinchin. Why should you try it you may ask? Well, it is worth the price #100 (100 Naria), The quantity is great. It has a sweet soft milky texture that makes you crave for more when it lands in your mouth. Top that buying about 3 and drinking water should hold you for sometime.
+
+![Img 3](./assets/img-3.png)
+
+Fetching all the products from the database
+
+![Img 4](./assets/img-4.png)
+
+Creating a new product
+
+![Img 5](./assets/img-5.png)
+Getting all products.
 
 ## Resources 👜
 
