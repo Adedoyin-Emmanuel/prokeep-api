@@ -30,6 +30,9 @@ Creating a new product
 ![Img 5](./assets/img-5.png)
 Getting all products.
 
+![Img 6](./assets/img-6.png)
+Updating a product
+
 ## Resources 👜
 
 As usual, I'm going to list out the resources I used to build this API. I'm using Youtube and <https://roadmap.sh>. I use <https://roadmap.sh> to check what I've to learn and then watch them on Youtube.
