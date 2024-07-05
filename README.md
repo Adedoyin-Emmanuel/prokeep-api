@@ -1,6 +1,14 @@
-# Prokeep API 🚀
+# Prokeep API 🎖️
 
 This is a simple API built ASP.NET. I built this API to learn how building API's works in ASP.NET. This API is built with DOTNET 8, Entity Framework Core 8 and Postgres Database. Top that, this is my first API with **ASP.NET** and I love it.
+
+## Table Of Content
+
+- [Prokeep API 🎖️](#prokeep-api-️)
+  - [Table Of Content](#table-of-content)
+  - [Why I built this API 🤔](#why-i-built-this-api-)
+  - [API Demo 🔧](#api-demo-)
+  - [Resources 👜](#resources-)
 
 ## Why I built this API 🤔
 
@@ -32,6 +40,10 @@ Getting all products.
 
 ![Img 6](./assets/img-6.png)
 Updating a product
+
+![Img 7](./assets/img-7.png)
+
+Deleting a product
 
 ## Resources 👜
 
