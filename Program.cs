@@ -5,15 +5,14 @@ using dotenv.net;
 DotEnv.Load();
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
-
+var serverVersion = new MySqlServerVersion(new Version(8, 0, 36));
 
 
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContextPool<AppContext>(options => options.UseNpgsql(connectionString));
-builder.EnrichNpgsqlDbContext<AppContext>();
+builder.Services.AddDbContext<AppContext>(options => options.UseMySql(connectionString, serverVersion));
 
 var app = builder.Build();
 

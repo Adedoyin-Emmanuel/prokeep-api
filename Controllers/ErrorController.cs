@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using prokeep.Controllers.Extensions;
 
 
-namespace prokeep.Controller;
+namespace prokeep.Controllers;
 
 
 [Route("/error")]

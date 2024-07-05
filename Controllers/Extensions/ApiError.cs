@@ -19,6 +19,7 @@ namespace prokeep.Controllers.Extensions
         {
             StatusCode = statusCode;
             StatusDescription = statusDescription;
+            Message = statusDescription;
         }
 
 

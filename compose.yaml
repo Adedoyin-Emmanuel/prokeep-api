@@ -1,17 +1,19 @@
-version: "3.8"
+version: '3.8'
 
 services:
-  postgres:
-    image: bitnami/postgresql:latest
-    container_name: prokeeep-postgres
-    ports:
-      - "5432:5432"
+  mysql:
+    image: mysql/mysql-server:latest
+    container_name: prokeep-mysql
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin@prokeep
-      POSTGRESQL_DATABASE: prokeep-db
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin@prokeep
+      - MYSQL_DATABASE=prokeep-db
+      - MYSQL_ROOT_PASSWORD=admin@prokeep
+    ports:
+      - "3306:3306"
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - mysql_data:/var/lib/mysql
+
 volumes:
-  postgres-data:
+  mysql_data:
     driver: local

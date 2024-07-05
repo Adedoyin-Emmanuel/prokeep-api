@@ -1,10 +1,10 @@
-FROM bitnami/postgresql:latest
+FROM mysql/mysql-server:latest
 
 
-ENV POSTGRES_USER = admin
-ENV POSTGRES_PASSWORD = admin@prokeep
-ENV POSTGRESQL_DATABASE = prokeep-db
+ENV MYSQL_USER = admin
+ENV MYSQL_PASSWORD = admin@prokeep
+ENV MYSQL_DATABASE = prokeep-db
+ENV MYSQL_ROOT_PASSWORD=admin@prokeep
 
 
-
-EXPOSE 5432
+EXPOSE 3306

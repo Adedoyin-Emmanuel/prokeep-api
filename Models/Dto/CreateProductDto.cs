@@ -1,25 +1,16 @@
 using System.ComponentModel.DataAnnotations;
 
-
 namespace prokeep.Models.Dto;
 
 
 
-public class CreateProductDto
-{
+public record CreateProductDto(
 
-    [Required]
-    [MaxLength(50)]
-    public required string Title { get; set; }
+    [Required, MinLength(1)] string Title,
 
-    [Required]
-    [MaxLength(2500)]
-    public required string Description { get; set; }
+    [Required][MaxLength(2500)] string Description,
 
+    [Required] int Price,
 
-    [Required]
-    public required int Price { get; set; }
-
-    [Required]
-    public required string Manufacturer { get; set; }
-}
+    [Required] string Manufacturer
+);

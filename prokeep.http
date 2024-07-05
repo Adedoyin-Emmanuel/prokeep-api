@@ -1,6 +1,5 @@
-@prokeep_HostAddress = http://localhost:5078
+GET http://localhost:5078/api/weatherforecast
 
-GET {{prokeep_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

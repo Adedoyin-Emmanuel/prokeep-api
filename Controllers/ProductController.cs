@@ -1,15 +1,17 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using prokeep.Controllers.Extensions;
+using prokeep.Models;
+using prokeep.Models.Dto;
 
 
 namespace prokeep.Controllers;
 
 
+[Route("api/[controller]")]
 [ApiController]
-[Route("api/[Controller]")]
+
 public class ProductController(ILogger<ProductController> logger, AppContext dbContext) : ControllerBase
 {
 
@@ -19,16 +21,23 @@ public class ProductController(ILogger<ProductController> logger, AppContext dbC
 
 
     [HttpPost]
-    public async Task<IActionResult> Create()
+    public async Task<IActionResult> Create(CreateProductDto createProductDto)
     {
-        var response = new
+
+
+        var product = new Product
         {
-            Title = "Chocolate Bread",
-            Description = "Sweet yummy chocolate bread"
+            Title = createProductDto.Title,
+            Description = createProductDto.Description,
+            Price = createProductDto.Price,
+            Manufacturer = createProductDto.Manufacturer
         };
 
+        await _dbContext.Product.AddAsync(product);
 
-        return new CreatedAtActionResult("Create", "Product", response, new Respond("Product created successfully", response));
+        await _dbContext.SaveChangesAsync();
+
+        return new CreatedAtActionResult("Create", "Product", product, new Respond("Product created successfully", product));
 
     }
 
